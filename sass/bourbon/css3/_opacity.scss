@@ -1,0 +1,12 @@
+@mixin opacity($opacity) {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+    filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+  }
+  opacity: $opacity;
+}
+
+// Make an element completely transparent.
+@mixin transparent { @include opacity(0); }
+
+// Make an element completely opaque.
+@mixin opaque { @include opacity(1); }

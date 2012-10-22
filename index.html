@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<? require_once("dummy/dummy.php") ?>
+
+<html class="no-js">
+<head>
+    <title>New Project Template</title>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- maximum-scale=1 -->
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <!-- meta name="apple-mobile-web-app-title" content="" -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/screen.css">
+
+    <!-- Classic fav and bookmarky stuff... -->
+    <link rel="shortcut icon" href="img/icons/favicon.ico" />
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114x114-precomposed.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --> 
+    <link rel="apple-touch-icon-precomposed" href="img/icons/apple-touch-icon-precomposed.png">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+
+    <!-- Analytics -->
+    <script>var _gaq=[['_setAccount','UA-XXXXXX-XX'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+
+</head>
+<body>
+
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <img src="<? dummy("image@3:1.9,") ?>" width="100%"  />
+
+<div class="main-content">
+    <h1><? dummy("text@headline") ?></h1>
+    <? while (dumb_luck("1-2")): ?>
+        <p><? dummy("text@walton") ?></p>
+    <? endwhile ?>
+
+    <? while (dumb_luck("1-1")): ?>
+        <h2><? dummy("text@headline") ?></h2>
+        <? while (dumb_luck("1-2")): ?>
+            <p><? dummy("text@walton") ?></p>
+        <? endwhile ?>
+    <? endwhile ?>
+
+    <ul>
+        <? while (dumb_luck("4-6")): ?>
+            <li><? dummy("text@short-teaser") ?></li>
+        <? endwhile ?>
+    </ul>
+
+    <? while (dumb_luck("3-4")): ?>
+        <h3><? dummy("text@headline") ?></h3>
+        <p><? dummy("text@walton") ?></p>
+        <? while (dumb_luck("1-2")): ?>
+            <p><? dummy("text@long-teaser") ?></p>
+        <? endwhile ?>
+    <? endwhile ?>
+
+
+<button type="test" class="button1"><b>Remove</b></button>
+<button type="test" class="button1" disabled="disabled"><b>Remove</b></button>
+<br/>
+<button type="test" class="button2"><b>Send</b></button>
+<button type="test" class="button2" disabled="disabled"><b>Send</b></button>
+<br/>
+<button type="test" class="button3"><b>Settings</b></button>
+<button type="test" class="button3"  disabled="disabled"><b>Settings</b></button>
+<br/>
+<button type="test" class="button4"><b>Cancel</b></button>
+<button type="test" class="button4" disabled="disabled"><b>Cancel</b></button>
+
+    <? while (dumb_luck("3-4")): ?>
+        <h3><? dummy("text@headline") ?></h3>
+        <p><? dummy("text@walton") ?></p>
+        <? while (dumb_luck("1-2")): ?>
+            <p><? dummy("text@long-teaser") ?></p>
+        <? endwhile ?>
+    <? endwhile ?>
+
+</div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
+</body>
+</html>

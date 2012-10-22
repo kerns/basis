@@ -1,0 +1,6 @@
+@mixin all-link-psuedos($color) {
+    &:link { color: darken($color, 10%); }
+    &:visisted { color: darken($color, 20%); }
+    &:hover { color: darken($color, 30%); }
+    &:active { color: darken($color, 40%); }
+}

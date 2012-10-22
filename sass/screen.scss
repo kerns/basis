@@ -1,0 +1,126 @@
+@import "bourbon/_bourbon";
+@import "neat/_neat";
+
+@import "core/normalize";
+@import "core/respond-to";
+@import "core/vertical-rhythm";
+@import "core/link-psuedos";
+@import "core/buttons";
+//@import "core/_debug";
+
+$base-font-size: 24px;
+$base-line-height: 1.5;
+$mainLinkColor: hsla(0,75%,50%,1);
+
+body {
+
+    background-color: #fff;
+    font-family: $fancy;
+    color: #333;
+
+    @include establish-baseline();
+    @include respond-to(mobile) {
+        $base-font-size: 16px;
+        @include establish-baseline();
+    }
+
+    @include respond-to(small-screen) {
+        $base-font-size: 20px;
+        @include establish-baseline();
+    }
+
+    @include respond-to(large-screen) {
+        $base-font-size: 28px;
+        @include establish-baseline();
+    }
+
+}
+
+.main-content {
+
+    @include respond-to(mobile) {
+        @include h-padding(.5);
+    }
+
+    @include respond-to(small-screen) {
+        @include h-padding(1);
+    }
+
+    @include respond-to(medium-screen) {
+        @include h-padding(2);
+    }
+
+    @include respond-to(large-screen) {
+        @include h-padding(4.5);
+    }
+
+}
+
+h1 {
+    @include vertical-rhythm(2.25,1.5);
+    
+    @include respond-to(mobile) {
+        @include vertical-rhythm(1.8,1.333);
+    }
+}
+
+h2 {
+    @include vertical-rhythm(1.4, 1);
+}
+
+h3 {
+    @include vertical-rhythm(1.1, 1);
+}
+
+h4 {
+    @include vertical-rhythm(1.25, 1, false);
+
+}
+
+h5 {
+    @include vertical-rhythm(1, 1, false);
+}
+
+h6 {
+    @include vertical-rhythm(1, 1, false);
+}
+
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img, figure, figcaption, button, hr {
+    @include vertical-rhythm(1, 1);
+}
+
+a {
+    color: $mainLinkColor;
+    @include all-link-psuedos($mainLinkColor);
+}
+
+a {
+    @include transition (all, 2.0s, ease-in-out);
+}
+
+.button1 { 
+    @include button(hsla(0,70%,50%,1));
+    @include vertical-rhythm(1,1);
+    font-family: sans-serif;
+}
+
+.button2 { 
+    @include button(clean, hsla(200,50%,80%,1));
+    @include vertical-rhythm(1, 1);
+    font-family: sans-serif;
+}
+
+.button3 { 
+    @include button(pill, hsla(330,50%,60%,1));
+    @include vertical-rhythm(1, 1);
+    font-family: sans-serif;    
+}
+
+.button4 { 
+    @include button(clean, hsla(0,0,60%,1));
+    @include vertical-rhythm(1, 1);
+    font-family: sans-serif;    
+}
+ 
+
+ 

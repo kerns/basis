@@ -1,0 +1,19 @@
+// Box-Shadow Mixin Requires Sass v3.1.1+
+
+// Single Box Shadow
+// @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+
+// Multiple Box Shadows
+// @include box-shadow(1px 1px 5px 1px green, -1px -1px 5px 1px blue);
+
+@mixin box-shadow ($shadow-1,
+  $shadow-2: false, $shadow-3: false,
+  $shadow-4: false, $shadow-5: false,
+  $shadow-6: false, $shadow-7: false,
+  $shadow-8: false, $shadow-9: false)
+  {
+    $full: compact($shadow-1, $shadow-2, $shadow-3, $shadow-4,
+                   $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9);
+
+    @include prefixer(box-shadow, $full, webkit, not moz);
+}
