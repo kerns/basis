@@ -1,0 +1,120 @@
+// Based on thoughbot's _button.scss
+// https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_button.scss
+//
+//
+
+@mixin button ($style: default, $base-color: #555) {
+  @if type-of($style) == color {
+    $base-color: $style;
+    $style: default;
+  }
+
+//*** Button Style ***//
+  @if $style == default {
+    @include default($base-color);
+  }
+
+  @else if $style == pill {
+    @include pill($base-color);
+  }
+
+//*** Button Globals ***//
+    @include respond-to(mobile) {
+        width:100%
+    }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:disabled b {
+    opacity:.85;
+  }
+
+  &:active:not(:disabled) {
+    // Push the text down when pressed...   
+    b {
+      position:relative;
+      top:1px;
+      opacity:.8;
+    }
+  }
+
+} 
+
+$lightness-threshold: 70;
+$darkness-threshold: 30;
+
+//*** Default State ***//
+@mixin  default($base-color) {
+  $text-color: change-color($base-color, $saturation: 40%,  $lightness: 90%);
+  $text-shadow-value: -1px;
+  $text-shadow-color: change-color($base-color, $saturation:  0,  $lightness: 0, $alpha:.75);
+  $background-color: adjust-color($base-color, $saturation:  0,  $lightness: 10%);
+  $border-radius: 3px;
+  $border:1px solid adjust-color($base-color, $saturation:  -40%,  $lightness: -30%);
+  $inner-highlight: inset 0 1px 0 0 adjust-color($base-color, $saturation:  -50%,  $lightness: 25%);
+  $inner-shadow: inset 0 -1px 0 0 adjust-color($base-color, $saturation:  0,  $lightness: -50%);
+  $dark-gradient-overlay: inset 0 -3em 3em -3em adjust-color($base-color, $lightness:-20%);
+  $outer-shadow:  0 2px 2px 0 adjust-color($base-color, $saturation:-90%, $lightness:-50%, $alpha:-.7);
+
+  //*** Hover State ***//
+  $hover-background-color: adjust-color($base-color, $saturation:  10%,  $lightness: 30%);
+  $hover-text-color: change-color($base-color, $lightness: 100%);
+  $hover-border:1px solid adjust-color($base-color, $saturation:  -40%,  $lightness: -10%);
+  @include transition (background-color .2s linear);
+
+  //*** Active State ***//
+  $active-background-color: adjust-color($base-color, $saturation: -15%,  $lightness: -5%);
+  $active-dark-gradient-overlay: inset 0 0 .25em 0 adjust-color($base-color, $lightness:-55%, $alpha:1);
+
+// If the button is disabled
+  &:disabled {
+
+  }
+
+
+  @if lightness($base-color) > $lightness-threshold {
+    $text-color: adjust-color($base-color, $saturation: -50%,  $lightness: -50%);
+    $text-shadow-value: 1px;
+    $text-shadow-color: change-color($base-color, $saturation:  0,  $lightness: 100, $alpha:.75);
+  }
+
+@if lightness($base-color) < $darkness-threshold {
+    
+    $inner-highlight: inset 0 1px 0 0 adjust-color($base-color, $saturation:  -50%,  $lightness: 40%);
+    $hover-background-color: adjust-color($base-color, $saturation:  -5%,  $lightness: 30%);
+    $active-background-color: adjust-color($base-color, $saturation: -5%,  $lightness: 10%);
+  }
+
+  @else if saturation($base-color) == 0 {
+    $text-color: grayscale($text-color);
+    $background-color: grayscale($background-color);
+    $hover-background-color: lighten($background-color,30%);
+  }
+
+
+  @include box-shadow ($outer-shadow, $inner-highlight, $inner-shadow, $dark-gradient-overlay);
+  background-color: $background-color;
+  border: $border;
+  border-radius: $border-radius;
+  color: $text-color !important;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: .25em .75em .2em;
+  text-decoration: none;
+  text-shadow: 0 $text-shadow-value 0 $text-shadow-color;
+  -webkit-background-clip: padding-box;
+
+  &:hover:not(:disabled) {
+    background-color: $hover-background-color;
+    border: $hover-border;
+    color: $hover-text-color;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $active-background-color;
+    @include box-shadow ($active-dark-gradient-overlay);
+  }
+
+}
