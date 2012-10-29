@@ -41,57 +41,65 @@
 
 } 
 
-$lightness-threshold: 70;
+//*** Global Variables ***//
+$lightness-threshold: 60;
 $darkness-threshold: 30;
 
 //*** Default State ***//
 @mixin  default($base-color) {
-  $text-color: change-color($base-color, $saturation: 40%,  $lightness: 90%);
+  $text-color: change-color($base-color, $saturation: 40%,  $lightness: 95%);
   $text-shadow-value: -1px;
-  $text-shadow-color: change-color($base-color, $saturation:  0,  $lightness: 0, $alpha:.75);
-  $background-color: adjust-color($base-color, $saturation:  0,  $lightness: 10%);
+  $text-shadow-color: change-color($base-color, $saturation:  0,  $lightness: 0, $alpha:.55);
+  $background-color: adjust-color($base-color, $saturation:  0,  $lightness: 0);
   $border-radius: 3px;
   $border:1px solid adjust-color($base-color, $saturation:  -40%,  $lightness: -30%);
-  $inner-highlight: inset 0 1px 0 0 adjust-color($base-color, $saturation:  -50%,  $lightness: 25%);
+  $inner-highlight: inset 0 1px 0 0 adjust-color($base-color, $saturation:  -25%,  $lightness: 25%);
   $inner-shadow: inset 0 -1px 0 0 adjust-color($base-color, $saturation:  0,  $lightness: -50%);
   $dark-gradient-overlay: inset 0 -3em 3em -3em adjust-color($base-color, $lightness:-20%);
-  $outer-shadow:  0 2px 2px 0 adjust-color($base-color, $saturation:-90%, $lightness:-50%, $alpha:-.7);
+  $outer-shadow:  0 1px 1px 0 adjust-color($base-color, $saturation:-90%, $lightness:-30%, $alpha:-.5);
 
   //*** Hover State ***//
-  $hover-background-color: adjust-color($base-color, $saturation:  10%,  $lightness: 30%);
-  $hover-text-color: change-color($base-color, $lightness: 100%);
-  $hover-border:1px solid adjust-color($base-color, $saturation:  -40%,  $lightness: -10%);
   @include transition (background-color .2s linear);
+  $hover-background-color: adjust-color($base-color, $saturation:  10%,  $lightness: 15%);
+  $hover-text-color: change-color($base-color, $lightness: 100%);
+  $hover-border:1px solid adjust-color($base-color, $saturation:  -40%,  $lightness: -5%);
 
   //*** Active State ***//
-  $active-background-color: adjust-color($base-color, $saturation: -15%,  $lightness: -5%);
-  $active-dark-gradient-overlay: inset 0 0 .25em 0 adjust-color($base-color, $lightness:-55%, $alpha:1);
+  $active-background-color: adjust-color($base-color, $saturation: -10%,  $lightness: -5%);
+  $active-dark-gradient-overlay: inset 0 0 1px 0 adjust-color($base-color, $lightness:-40%), inset 0 0 .5em 0 adjust-color($base-color, $lightness:-35%, $alpha:1);
+  $active-border:1px solid adjust-color($base-color, $saturation:  -40%,  $lightness: -50%);
 
-// If the button is disabled
-  &:disabled {
+  //*** Disabled State ***//
+  $disabled-background-color: adjust-color($base-color, $saturation:  0,  $lightness: 5%);
+  $disabled-text-color: adjust-color($base-color, $saturation: 40%,  $lightness: 100%);
+  $disabled-border: 1px solid adjust-color($base-color, $saturation:  -20%,  $lightness: -5%);
 
-  }
-
-
+//*** Lightness threshold exception ***//
   @if lightness($base-color) > $lightness-threshold {
-    $text-color: adjust-color($base-color, $saturation: -50%,  $lightness: -50%);
+    $text-color: adjust-color($base-color, $saturation: -20%,  $lightness: -50%);
     $text-shadow-value: 1px;
     $text-shadow-color: change-color($base-color, $saturation:  0,  $lightness: 100, $alpha:.75);
+  
+  // Disabled State
+    $disabled-background-color: adjust-color($base-color, $saturation:  -20%,  $lightness: 5%);
+    $disabled-text-color: adjust-color($base-color, $saturation: -40%,  $lightness: -30%);
+    $disabled-border: 1px solid adjust-color($base-color, $saturation:  -20%,  $lightness: -10%);
   }
 
-@if lightness($base-color) < $darkness-threshold {
-    
+//*** Darkness threshold exception ***//
+  @if lightness($base-color) < $darkness-threshold {
     $inner-highlight: inset 0 1px 0 0 adjust-color($base-color, $saturation:  -50%,  $lightness: 40%);
     $hover-background-color: adjust-color($base-color, $saturation:  -5%,  $lightness: 30%);
-    $active-background-color: adjust-color($base-color, $saturation: -5%,  $lightness: 10%);
+    $active-background-color: adjust-color($base-color, $saturation: -10%,  $lightness: 15%);
   }
 
-  @else if saturation($base-color) == 0 {
+//*** Grayscale exception ***//
+  @if saturation($base-color) == 0 {
     $text-color: grayscale($text-color);
+    $hover-text-color: darken($hover-text-color, 50%);
     $background-color: grayscale($background-color);
     $hover-background-color: lighten($background-color,30%);
   }
-
 
   @include box-shadow ($outer-shadow, $inner-highlight, $inner-shadow, $dark-gradient-overlay);
   background-color: $background-color;
@@ -99,7 +107,6 @@ $darkness-threshold: 30;
   border-radius: $border-radius;
   color: $text-color !important;
   display: inline-block;
-  font-size: 1em;
   font-weight: bold;
   padding: .25em .75em .2em;
   text-decoration: none;
@@ -114,7 +121,16 @@ $darkness-threshold: 30;
 
   &:active:not(:disabled) {
     background-color: $active-background-color;
+    border: $active-border;
     @include box-shadow ($active-dark-gradient-overlay);
+  }
+
+  // If the button is disabled
+  &:disabled {
+    background-color: $disabled-background-color;
+    border: $disabled-border;
+    color: $disabled-text-color !important;
+    box-shadow:none;
   }
 
 }
