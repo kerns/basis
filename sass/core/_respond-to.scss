@@ -1,6 +1,8 @@
 // Mixin for Semantic Grid reponsiveness
 
 $break-small: 420px;
+$break-small-description: Mobile dev;
+$break-small-color: hsla(190,50,75,1);
 $break-medium: 620px;
 $break-large: 1000px;
 
@@ -20,12 +22,49 @@ $break-large: 1000px;
     @else if $media == retina {
         @media only screen and (-webkit-min-device-pixel-ratio: 2) { @content; }
     }
+    @else if $media == "!retina" {
+        @media not screen and (-webkit-min-device-pixel-ratio: 2) { @content; }
+    }
+}
+
+
+.dimensions {
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font:1em sans-serif;
+    position:absolute;
+    right:0;
+    top:0;    
+    padding:.30em .5em;
+    text-shadow: 0 1px 0 hsla(0,0,0,.5);
+    z-index:500000;
+}
+
+
+@mixin breakpointbar {
+    display: block;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    font:1em sans-serif;
+    padding:.30em .5em;
 }
 
 @mixin debug-respond-to ($height: 10px) {
     
     @media only screen and (max-width: $break-small) {
-        border-left:$height+px solid hsla(0,100%,50%,1);
+
+        body::before {
+        content: "#{$break-small}";
+        @include breakpointbar;
+        color: adjust-color($break-small-color, $saturation: -10%,  $lightness:  -50%);
+        background: $break-small-color;
+        text-shadow: 0 1px 0 hsla(0,0,100,.5);
+
+    }
+
     }
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
         border-left:$height+px solid hsla(60,100%,50%,1);
@@ -36,5 +75,10 @@ $break-large: 1000px;
     @media only screen and (min-width: $break-large) {
         border-left:$height+px solid hsla(300,50%,50%,1);
     }
-
 }
+
+
+
+
+
+

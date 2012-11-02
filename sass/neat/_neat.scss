@@ -2,12 +2,9 @@
 // MIT Licensed
 // Copyright (c) 2011 thoughtbot, inc.
 
-// Custom Functions
-@import "functions/px-to-em";
-@import "functions/grid";
-
-// Default Settings
-@import "settings/grid";
-
-// The Grid
+@import "functions/private";
+@import "functions/helpers";
+@import "settings/default";
+@import "grid/global-variables";
 @import "grid/grid";
+@import "grid/visual-grid";

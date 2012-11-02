@@ -1,67 +1,76 @@
-@import "bourbon/_bourbon";
-@import "neat/_neat";
+@import "bourbon/bourbon";
+@import "neat/neat";
 
+@import "core/base";
 @import "core/normalize";
 @import "core/respond-to";
 @import "core/vertical-rhythm";
 @import "core/link-psuedos";
 @import "core/buttons";
+
 //@import "core/_debug";
 
 $base-font-size: 24px;
 $base-line-height: 1.5;
 $mainLinkColor: hsla(0,75%,50%,1);
 
-body {
+/*
 
+$base-font-size: 28px;
+@include establish-baseline();
+
+*/
+
+$visual-grid: true;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+
+
+
+$mobile: new-breakpoint(max-width 480px 4); // Use an 4 column
+$tablet: new-breakpoint(min-width 481px max-width 989px 8); // Use an 8 column
+$megadesktop: new-breakpoint(min-width 1134px 8); // Use an 8 column
+
+
+body {
     background-color: #fff;
     font-family: $fancy;
     color: #333;
-
     @include establish-baseline();
-    @include respond-to(mobile) {
+
+    @include media($mobile) {
         $base-font-size: 16px;
         @include establish-baseline();
     }
 
-    @include respond-to(small-screen) {
+    @include media($tablet) {
         $base-font-size: 20px;
         @include establish-baseline();
     }
 
-    @include respond-to(large-screen) {
-        $base-font-size: 28px;
+    @include media($megadesktop) {
+        $base-font-size: 35px;
         @include establish-baseline();
+        background-color: red;
     }
 
 }
 
+.container {
+    @include outer-container();
+    $visual-grid-opacity: 0.3;
+}
+
 .main-content {
+  @include span-columns(4);
+}
 
-    @include respond-to(mobile) {
-        @include h-padding(.5);
-    }
-
-    @include respond-to(small-screen) {
-        @include h-padding(1);
-    }
-
-    @include respond-to(medium-screen) {
-        @include h-padding(2);
-    }
-
-    @include respond-to(large-screen) {
-        @include h-padding(4.5);
-    }
-
+.aside {
+  @include span-columns(4);
 }
 
 h1 {
     @include vertical-rhythm(2.25,1.5);
-    
-    @include respond-to(mobile) {
-        @include vertical-rhythm(1.8,1.333);
-    }
 }
 
 h2 {
@@ -92,35 +101,42 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 a {
     color: $mainLinkColor;
     @include all-link-psuedos($mainLinkColor);
+    &:link {@include transition (color .1s linear)}
 }
 
-a {
-    @include transition (all, 2.0s, ease-in-out);
-}
-
-.button1 { 
-    @include button(hsla(0,70%,50%,1));
+.button1 {
+    @include button(hsla(0,90,60,1));
     @include vertical-rhythm(1,1);
     font-family: sans-serif;
 }
 
 .button2 { 
-    @include button(clean, hsla(200,50%,80%,1));
+    @include button(hsla(200,60,90,1));
     @include vertical-rhythm(1, 1);
     font-family: sans-serif;
 }
 
+
 .button3 { 
-    @include button(pill, hsla(330,50%,60%,1));
+    @include button(hsla(280,50,70,1));
     @include vertical-rhythm(1, 1);
     font-family: sans-serif;    
 }
 
 .button4 { 
-    @include button(clean, hsla(0,0,60%,1));
+    @include button(hsla(320,100,75,1));
     @include vertical-rhythm(1, 1);
     font-family: sans-serif;    
 }
- 
 
- 
+.button5 { 
+    @include button(hsla(0,50,90,1));
+    @include vertical-rhythm(1, 1);
+    font-family: sans-serif;    
+}
+
+.button6 { 
+    @include button(hsla(270,0,20,1));
+    @include vertical-rhythm(1, 1);
+    font-family: sans-serif;    
+}

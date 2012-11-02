@@ -1,4 +1,7 @@
+html {
+    @include debug-respond-to();
+}
+
 body {
-    @include debug-respond-to(10);
     @include debug-vertical-rhythm(white);
 }
