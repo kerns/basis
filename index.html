@@ -43,30 +43,20 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-<img src="<? dummy("image@3:.4,") ?>" width="100%"  />
+<!--<img src="<? dummy("image/retina@3:1.8,") ?>" width="100%"  /> -->
 
 <div class="container">
+
+    <div class="navigation">
+    <h5><? dummy("text@headline") ?></h5>
+    <ul>
+        <? while (dumb_luck("4-6")): ?>
+        <li><h4><a href="#"><? dummy("text@headline") ?></a></h4></li>
+        <? endwhile ?>
+    </ul>
+    </div>
+
     <div class="main-content">
-
-    <button type="test" class="button1"><b>Delete</b></button>
-    <button type="test" class="button1"  disabled="disabled"><b>Edit</b></button><br/>
-    
-    <button type="test" class="button2"><b>Settings</b></button>
-    <button type="test" class="button2" disabled="disabled"><b>Delete</b></button><br/>
-
-    <button type="test" class="button3"><b>Edit</b></button>
-    <button type="test" class="button3" disabled="disabled"><b>Settings</b></button><br/>
-
-    <button type="test" class="button4"><b>Delete</b></button>
-    <button type="test" class="button4" disabled="disabled"><b>Edit</b></button><br/>
-    
-    <button type="test" class="button5"><b>Settings</b></button>
-    <button type="test" class="button5" disabled="disabled"><b>Settings</b></button><br/>
-
-    <button type="test" class="button6"><b>Settings</b></button>
-    <button type="test" class="button6" disabled="disabled"><b>Settings</b></button><br/>
-
-    
     <h1><? dummy("text@headline") ?></h1>
     <? while (dumb_luck("1-2")): ?>
         <p><? dummy("text@walton") ?></p>
@@ -100,9 +90,12 @@
         <? while (dumb_luck("2-3")): ?>
             <p><? dummy("text@paragraph") ?></p>
         <? endwhile ?>
-            <button type="test" class="button1"><b>Settings</b></button>
 
-            <a href="#" class="button2"><b>Hello</b></a>
+        <button type="test" class="button1"><b>Delete</b></button>
+        <button type="test" class="button1"  disabled="disabled"><b>Edit</b></button><br/>
+        <button type="test" class="button2"><b>Delete</b></button>
+        <button type="test" class="button2"  disabled="disabled"><b>Edit</b></button><br/>
+
         </aside>
     </div>
 

@@ -1,7 +1,30 @@
+/* Site: [site name] */
+/* Author: [author] */
+/* Created: [date] */
+/* Updated: [date] */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+body:before {
+  content: '';
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0) 0, #d4d4d4 0, #d4d4d4 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, #d4d4d4 8.5298%, #d4d4d4 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, #d4d4d4 17.05961%, #d4d4d4 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, #d4d4d4 25.58941%, #d4d4d4 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, #d4d4d4 34.11922%, #d4d4d4 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, #d4d4d4 42.64902%, #d4d4d4 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, #d4d4d4 51.17883%, #d4d4d4 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, #d4d4d4 59.70863%, #d4d4d4 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, #d4d4d4 68.23843%, #d4d4d4 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, #d4d4d4 76.76824%, #d4d4d4 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, #d4d4d4 85.29804%, #d4d4d4 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, #d4d4d4 93.82785%, #d4d4d4 100.0%, rgba(0, 0, 0, 0) 100.0%));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #d4d4d4 0, #d4d4d4 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, #d4d4d4 8.5298%, #d4d4d4 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, #d4d4d4 17.05961%, #d4d4d4 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, #d4d4d4 25.58941%, #d4d4d4 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, #d4d4d4 34.11922%, #d4d4d4 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, #d4d4d4 42.64902%, #d4d4d4 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, #d4d4d4 51.17883%, #d4d4d4 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, #d4d4d4 59.70863%, #d4d4d4 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, #d4d4d4 68.23843%, #d4d4d4 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, #d4d4d4 76.76824%, #d4d4d4 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, #d4d4d4 85.29804%, #d4d4d4 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, #d4d4d4 93.82785%, #d4d4d4 100.0%, rgba(0, 0, 0, 0) 100.0%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #d4d4d4 0, #d4d4d4 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, #d4d4d4 8.5298%, #d4d4d4 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, #d4d4d4 17.05961%, #d4d4d4 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, #d4d4d4 25.58941%, #d4d4d4 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, #d4d4d4 34.11922%, #d4d4d4 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, #d4d4d4 42.64902%, #d4d4d4 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, #d4d4d4 51.17883%, #d4d4d4 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, #d4d4d4 59.70863%, #d4d4d4 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, #d4d4d4 68.23843%, #d4d4d4 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, #d4d4d4 76.76824%, #d4d4d4 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, #d4d4d4 85.29804%, #d4d4d4 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, #d4d4d4 93.82785%, #d4d4d4 100.0%, rgba(0, 0, 0, 0) 100.0%);
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #d4d4d4 0, #d4d4d4 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, #d4d4d4 8.5298%, #d4d4d4 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, #d4d4d4 17.05961%, #d4d4d4 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, #d4d4d4 25.58941%, #d4d4d4 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, #d4d4d4 34.11922%, #d4d4d4 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, #d4d4d4 42.64902%, #d4d4d4 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, #d4d4d4 51.17883%, #d4d4d4 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, #d4d4d4 59.70863%, #d4d4d4 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, #d4d4d4 68.23843%, #d4d4d4 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, #d4d4d4 76.76824%, #d4d4d4 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, #d4d4d4 85.29804%, #d4d4d4 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, #d4d4d4 93.82785%, #d4d4d4 100.0%, rgba(0, 0, 0, 0) 100.0%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #d4d4d4 0, #d4d4d4 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, #d4d4d4 8.5298%, #d4d4d4 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, #d4d4d4 17.05961%, #d4d4d4 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, #d4d4d4 25.58941%, #d4d4d4 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, #d4d4d4 34.11922%, #d4d4d4 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, #d4d4d4 42.64902%, #d4d4d4 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, #d4d4d4 51.17883%, #d4d4d4 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, #d4d4d4 59.70863%, #d4d4d4 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, #d4d4d4 68.23843%, #d4d4d4 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, #d4d4d4 76.76824%, #d4d4d4 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, #d4d4d4 85.29804%, #d4d4d4 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, #d4d4d4 93.82785%, #d4d4d4 100.0%, rgba(0, 0, 0, 0) 100.0%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #d4d4d4 0, #d4d4d4 6.17215%, rgba(0, 0, 0, 0) 6.17215%, rgba(0, 0, 0, 0) 8.5298%, #d4d4d4 8.5298%, #d4d4d4 14.70196%, rgba(0, 0, 0, 0) 14.70196%, rgba(0, 0, 0, 0) 17.05961%, #d4d4d4 17.05961%, #d4d4d4 23.23176%, rgba(0, 0, 0, 0) 23.23176%, rgba(0, 0, 0, 0) 25.58941%, #d4d4d4 25.58941%, #d4d4d4 31.76157%, rgba(0, 0, 0, 0) 31.76157%, rgba(0, 0, 0, 0) 34.11922%, #d4d4d4 34.11922%, #d4d4d4 40.29137%, rgba(0, 0, 0, 0) 40.29137%, rgba(0, 0, 0, 0) 42.64902%, #d4d4d4 42.64902%, #d4d4d4 48.82117%, rgba(0, 0, 0, 0) 48.82117%, rgba(0, 0, 0, 0) 51.17883%, #d4d4d4 51.17883%, #d4d4d4 57.35098%, rgba(0, 0, 0, 0) 57.35098%, rgba(0, 0, 0, 0) 59.70863%, #d4d4d4 59.70863%, #d4d4d4 65.88078%, rgba(0, 0, 0, 0) 65.88078%, rgba(0, 0, 0, 0) 68.23843%, #d4d4d4 68.23843%, #d4d4d4 74.41059%, rgba(0, 0, 0, 0) 74.41059%, rgba(0, 0, 0, 0) 76.76824%, #d4d4d4 76.76824%, #d4d4d4 82.94039%, rgba(0, 0, 0, 0) 82.94039%, rgba(0, 0, 0, 0) 85.29804%, #d4d4d4 85.29804%, #d4d4d4 91.4702%, rgba(0, 0, 0, 0) 91.4702%, rgba(0, 0, 0, 0) 93.82785%, #d4d4d4 93.82785%, #d4d4d4 100.0%, rgba(0, 0, 0, 0) 100.0%);
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: em(850);
+  opacity: 0.3;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: -1; }
 
 /* ==========================================================================
    (Edited) HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
@@ -480,18 +503,17 @@ table {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   z-index: 500000; }
 
-/*
-
-$base-font-size: 28px;
-@include establish-baseline();
-
-*/
 body {
   background-color: #fff;
-  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  font-family: sans-serif;
   color: #333;
   font-size: 24px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -ms-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear; }
   @media screen and (max-width: 480px) {
     body {
       font-size: 16px;
@@ -500,15 +522,15 @@ body {
     body {
       font-size: 20px;
       line-height: 1.5; } }
-  @media screen and (min-width: 1134px) {
+  @media screen and (min-width: 1234px) {
     body {
-      font-size: 35px;
-      line-height: 1.5;
-      background-color: red; } }
+      font-size: 28px;
+      line-height: 1.5; } }
 
 .container {
+  margin: auto;
   zoom: 1;
-  max-width: 68em;
+  max-width: em(850);
   text-align: left;
   margin-left: auto;
   margin-right: auto; }
@@ -518,21 +540,76 @@ body {
   .container:after {
     clear: both; }
 
+.navigation {
+  padding: 2.35765%;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .navigation:last-child {
+    margin-right: 0; }
+  .navigation ul {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 0.75em;
+    line-height: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: red; }
+  @media screen and (max-width: 480px) {
+    .navigation {
+      width: 100%; } }
+  @media screen and (min-width: 481px) and (max-width: 989px) {
+    .navigation {
+      width: 100%; } }
+
 .main-content {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 48.82117%;
+  padding: 2.35765%;
+  padding-left: 0;
+  padding-bottom: 0;
+  padding-right: 0; }
   .main-content:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    .main-content {
+      width: 100%; } }
+  @media screen and (min-width: 481px) and (max-width: 989px) {
+    .main-content {
+      display: block;
+      float: left;
+      margin-right: 3.57866%;
+      width: 61.158%; }
+      .main-content:last-child {
+        margin-right: 0; } }
 
 .aside {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 23.23176%;
+  padding: 2.35765%;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.8em;
+  line-height: 1.36875; }
   .aside:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    .aside {
+      width: 100%; } }
+  @media screen and (min-width: 481px) and (max-width: 989px) {
+    .aside {
+      display: block;
+      float: left;
+      margin-right: 3.57866%;
+      width: 35.26334%; }
+      .aside:last-child {
+        margin-right: 0; } }
 
 h1 {
   margin-bottom: 0.66667em;
@@ -589,20 +666,20 @@ a {
   a:active {
     color: #2d0606; }
   a:link {
-    -webkit-transition: compact(color 0.1s linear, false, false, false, false, false, false, false, false);
-    -moz-transition: compact(color 0.1s linear, false, false, false, false, false, false, false, false);
-    -ms-transition: compact(color 0.1s linear, false, false, false, false, false, false, false, false);
-    -o-transition: compact(color 0.1s linear, false, false, false, false, false, false, false, false);
-    transition: compact(color 0.1s linear, false, false, false, false, false, false, false, false); }
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    transition: color 0.1s linear; }
 
 .button1 {
-  -webkit-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -moz-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -ms-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -o-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -webkit-box-shadow: compact(0 2px 1px 0 rgba(77, 77, 77, 0.15), inset 0 1px 0 0 #e29c9c, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
-  box-shadow: compact(0 2px 1px 0 rgba(77, 77, 77, 0.15), inset 0 1px 0 0 #e29c9c, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(77, 77, 77, 0.15), inset 0 1px 0 0 #e29c9c, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(77, 77, 77, 0.15), inset 0 1px 0 0 #e29c9c, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
   background-color: #f53d3d;
   border: 1px solid #993333;
   border-radius: 3px;
@@ -623,8 +700,8 @@ a {
     border: 1px solid #a65959;
     color: white !important; }
   .button1:active:not(:disabled) {
-    -webkit-box-shadow: compact(inset 0 0 1px 0 rgba(194, 10, 10, 0.5), inset 0 0 0.5em 0 #931f1f, false, false, false, false, false, false, false, false);
-    box-shadow: compact(inset 0 0 1px 0 rgba(194, 10, 10, 0.5), inset 0 0 0.5em 0 #931f1f, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: inset 0 0 1px 0 rgba(194, 10, 10, 0.5), inset 0 0 0.5em 0 #931f1f;
+    box-shadow: inset 0 0 1px 0 rgba(194, 10, 10, 0.5), inset 0 0 0.5em 0 #931f1f;
     background-color: #d14747;
     border: 1px solid #4d1919; }
   .button1:disabled {
@@ -645,13 +722,13 @@ a {
     opacity: .8; }
 
 .button2 {
-  -webkit-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -moz-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -ms-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -o-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -webkit-box-shadow: compact(0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #2e3538, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
-  box-shadow: compact(0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #2e3538, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #2e3538, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #2e3538, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
   background-color: #d6ebf5;
   border: 1px solid #94bdd1;
   border-radius: 3px;
@@ -672,8 +749,8 @@ a {
     border: 1px solid #a3b8c2;
     color: #608a9f !important; }
   .button2:active:not(:disabled) {
-    -webkit-box-shadow: compact(inset 0 0 1px 0 rgba(133, 194, 224, 0.5), inset 0 0 0.5em 0 #47a3d1, false, false, false, false, false, false, false, false);
-    box-shadow: compact(inset 0 0 1px 0 rgba(133, 194, 224, 0.5), inset 0 0 0.5em 0 #47a3d1, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: inset 0 0 1px 0 rgba(133, 194, 224, 0.5), inset 0 0 0.5em 0 #47a3d1;
+    box-shadow: inset 0 0 1px 0 rgba(133, 194, 224, 0.5), inset 0 0 0.5em 0 #47a3d1;
     background-color: #9fcadf;
     border: 1px solid #668899; }
   .button2:disabled {
@@ -694,13 +771,13 @@ a {
     opacity: .8; }
 
 .button3 {
-  -webkit-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -moz-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -ms-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -o-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -webkit-box-shadow: compact(0 2px 1px 0 rgba(102, 102, 102, 0.15), inset 0 1px 0 0 #dccfe2, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
-  box-shadow: compact(0 2px 1px 0 rgba(102, 102, 102, 0.15), inset 0 1px 0 0 #dccfe2, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(102, 102, 102, 0.15), inset 0 1px 0 0 #dccfe2, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(102, 102, 102, 0.15), inset 0 1px 0 0 #dccfe2, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
   background-color: #bf8cd9;
   border: 1px solid #8c59a6;
   border-radius: 3px;
@@ -721,8 +798,8 @@ a {
     border: 1px solid #a99daf;
     color: white !important; }
   .button3:active:not(:disabled) {
-    -webkit-box-shadow: compact(inset 0 0 1px 0 rgba(149, 64, 191, 0.5), inset 0 0 0.5em 0 #682d86, false, false, false, false, false, false, false, false);
-    box-shadow: compact(inset 0 0 1px 0 rgba(149, 64, 191, 0.5), inset 0 0 0.5em 0 #682d86, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: inset 0 0 1px 0 rgba(149, 64, 191, 0.5), inset 0 0 0.5em 0 #682d86;
+    box-shadow: inset 0 0 1px 0 rgba(149, 64, 191, 0.5), inset 0 0 0.5em 0 #682d86;
     background-color: #9a64b4;
     border: 1px solid #4f4554; }
   .button3:disabled {
@@ -743,13 +820,13 @@ a {
     opacity: .8; }
 
 .button4 {
-  -webkit-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -moz-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -ms-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -o-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -webkit-box-shadow: compact(0 2px 1px 0 rgba(126, 103, 119, 0.15), inset 0 1px 0 0 #f6d5eb, inset 0 -1px 0 0 #13060f, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
-  box-shadow: compact(0 2px 1px 0 rgba(126, 103, 119, 0.15), inset 0 1px 0 0 #f6d5eb, inset 0 -1px 0 0 #13060f, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(126, 103, 119, 0.15), inset 0 1px 0 0 #f6d5eb, inset 0 -1px 0 0 #13060f, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(126, 103, 119, 0.15), inset 0 1px 0 0 #f6d5eb, inset 0 -1px 0 0 #13060f, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
   background-color: #ff80d4;
   border: 1px solid #d147a3;
   border-radius: 3px;
@@ -770,8 +847,8 @@ a {
     border: 1px solid #c982b2;
     color: #931f6d !important; }
   .button4:active:not(:disabled) {
-    -webkit-box-shadow: compact(inset 0 0 1px 0 rgba(255, 26, 178, 0.5), inset 0 0 0.5em 0 #df209f, false, false, false, false, false, false, false, false);
-    box-shadow: compact(inset 0 0 1px 0 rgba(255, 26, 178, 0.5), inset 0 0 0.5em 0 #df209f, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: inset 0 0 1px 0 rgba(255, 26, 178, 0.5), inset 0 0 0.5em 0 #df209f;
+    box-shadow: inset 0 0 1px 0 rgba(255, 26, 178, 0.5), inset 0 0 0.5em 0 #df209f;
     background-color: #e87dc4;
     border: 1px solid #8f246b; }
   .button4:disabled {
@@ -792,13 +869,13 @@ a {
     opacity: .8; }
 
 .button5 {
-  -webkit-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -moz-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -ms-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -o-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -webkit-box-shadow: compact(0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #333333, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
-  box-shadow: compact(0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #333333, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #333333, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(153, 153, 153, 0.15), inset 0 1px 0 0 white, inset 0 -1px 0 0 #333333, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
   background-color: #f2d9d9;
   border: 1px solid #c99c9c;
   border-radius: 3px;
@@ -819,8 +896,8 @@ a {
     border: 1px solid #baabab;
     color: #936c6c !important; }
   .button5:active:not(:disabled) {
-    -webkit-box-shadow: compact(inset 0 0 1px 0 rgba(217, 140, 140, 0.5), inset 0 0 0.5em 0 #c65353, false, false, false, false, false, false, false, false);
-    box-shadow: compact(inset 0 0 1px 0 rgba(217, 140, 140, 0.5), inset 0 0 0.5em 0 #c65353, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: inset 0 0 1px 0 rgba(217, 140, 140, 0.5), inset 0 0 0.5em 0 #c65353;
+    box-shadow: inset 0 0 1px 0 rgba(217, 140, 140, 0.5), inset 0 0 0.5em 0 #c65353;
     background-color: #d9a6a6;
     border: 1px solid #8c7373; }
   .button5:disabled {
@@ -841,13 +918,13 @@ a {
     opacity: .8; }
 
 .button6 {
-  -webkit-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -moz-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -ms-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -o-transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  transition: compact(color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, false, false, false, false, false, false);
-  -webkit-box-shadow: compact(0 2px 1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 0 #999999, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
-  box-shadow: compact(0 2px 1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 0 #999999, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3), false, false, false, false, false);
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 0 #999999, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 0 #999999, inset 0 -1px 0 0 black, inset 0 -3.25em 2.75em -3em rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
   border: 1px solid black;
   border-radius: 3px;
@@ -868,8 +945,8 @@ a {
     border: 1px solid #262626;
     color: #fafafa !important; }
   .button6:active:not(:disabled) {
-    -webkit-box-shadow: compact(inset 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 0 0.5em 0 black, false, false, false, false, false, false, false, false);
-    box-shadow: compact(inset 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 0 0.5em 0 black, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 0 0.5em 0 black;
+    box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 0 0.5em 0 black;
     background-color: #595959;
     border: 1px solid black; }
   .button6:disabled {

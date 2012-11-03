@@ -1,46 +1,60 @@
+/* Site: [site name] */
+/* Author: [author] */
+/* Created: [date] */
+/* Updated: [date] */
+
+// Pre-Framework Overrides ------ //
+
+// Grid
+$grid-columns: 12 !default; // Total number of columns in the grid
+$max-width: em(850) !default; // Max-width of the outer container
+
+// Visual Grid Variables
+$visual-grid: true !default; // Display the base grid
+$visual-grid-color: #d4d4d4 !default;
+$visual-grid-opacity: 0.3 !default;
+
+// Framwork Imports ------ //
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "neat/neat-helpers";
 
+// Core/Personal Imports & Add-ons ------ //
 @import "core/base";
 @import "core/normalize";
 @import "core/respond-to";
 @import "core/vertical-rhythm";
 @import "core/link-psuedos";
 @import "core/buttons";
-
 //@import "core/_debug";
 
+// Post-Framework Overrides ------ //
+
+// Media Query Breakpoints
+$mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid
+$tablet: new-breakpoint(min-width 481px max-width 989px 8); // Use an 8 column grid
+$desktop: new-breakpoint(min-width 1234px 12); // Use a 12 column grid
+
+// Typography
 $base-font-size: 24px;
 $base-line-height: 1.5;
+
+// Color
 $mainLinkColor: hsla(0,75%,50%,1);
 
-/*
-
-$base-font-size: 28px;
-@include establish-baseline();
-
-*/
-
-$visual-grid: true;
-$visual-grid-color: yellow;
-$visual-grid-index: front;
-
-
-
-$mobile: new-breakpoint(max-width 480px 4); // Use an 4 column
-$tablet: new-breakpoint(min-width 481px max-width 989px 8); // Use an 8 column
-$megadesktop: new-breakpoint(min-width 1134px 8); // Use an 8 column
+// And so begins the business...
 
 
 body {
     background-color: #fff;
-    font-family: $fancy;
+    font-family: sans-serif;
     color: #333;
     @include establish-baseline();
 
     @include media($mobile) {
         $base-font-size: 16px;
         @include establish-baseline();
+      //  background-color: hsla(0,50,50,.3)
     }
 
     @include media($tablet) {
@@ -48,25 +62,83 @@ body {
         @include establish-baseline();
     }
 
-    @include media($megadesktop) {
-        $base-font-size: 35px;
+    @include media($desktop) {
+        $base-font-size: 28px;
         @include establish-baseline();
-        background-color: red;
+       // background-color: hsla(210,50,50,.3);
     }
+
+    @include transition (all .6s linear)
 
 }
 
 .container {
+    margin:auto;
     @include outer-container();
-    $visual-grid-opacity: 0.3;
+}
+
+.navigation {
+    @include pad; 
+    @include span-columns(3);
+
+    ul {
+        @include vertical-rhythm(.75, 1, false);
+        list-style: none;
+        margin:0;
+        padding:0;
+        background-color: red
+    }
+
+    @include media($mobile) {
+
+        @include fill-parent;
+
+    }
+
+    @include media($tablet) {
+
+        @include fill-parent;
+
+    }
+
+    @include media($desktop) {
+
+    }
 }
 
 .main-content {
-  @include span-columns(4);
+    @include span-columns(6);
+    @include pad;
+    padding-left:0;
+    padding-bottom:0;
+    padding-right:0;
+
+    @include media($mobile) {
+        @include fill-parent;
+    }
+
+    @include media($tablet) {
+        @include span-columns(5);
+    }
+
 }
 
 .aside {
-  @include span-columns(4);
+    @include span-columns(3);
+    @include pad;
+    @include vertical-rhythm(.8, .73, false);
+        
+    @include media($mobile) {
+        @include fill-parent;
+    }
+
+    @include media($tablet) {
+        @include span-columns(3);
+    }
+
+    @include media($desktop) {
+        
+    }
 }
 
 h1 {
@@ -83,7 +155,6 @@ h3 {
 
 h4 {
     @include vertical-rhythm(1.25, 1, false);
-
 }
 
 h5 {
