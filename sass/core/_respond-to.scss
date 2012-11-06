@@ -28,28 +28,11 @@ $break-large: 1000px;
 }
 
 
-.dimensions {
-    background:rgba(0,0,0,.5);
-    color:#fff;
-    font:1em sans-serif;
-    position:absolute;
-    right:0;
-    top:0;    
-    padding:.30em .5em;
-    text-shadow: 0 1px 0 hsla(0,0,0,.5);
-    z-index:500000;
-}
+
 
 
 @mixin breakpointbar {
-    display: block;
-    text-align: left;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-    font:1em sans-serif;
-    padding:.30em .5em;
+
 }
 
 @mixin debug-respond-to ($height: 10px) {
@@ -58,11 +41,17 @@ $break-large: 1000px;
 
         body::before {
         content: "#{$break-small}";
-        @include breakpointbar;
+        display: block;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        font:1em sans-serif;
+        padding:.30em .5em;
         color: adjust-color($break-small-color, $saturation: -10%,  $lightness:  -50%);
         background: $break-small-color;
         text-shadow: 0 1px 0 hsla(0,0,100,.5);
-
     }
 
     }

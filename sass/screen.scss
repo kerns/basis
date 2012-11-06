@@ -3,11 +3,9 @@
 /* Created: [date] */
 /* Updated: [date] */
 
-// Pre-Framework Overrides ------ //
-
-// Grid
+// Pre-Framework Imports/Overrides ------ //
+// Grid Setup
 $grid-columns: 12 !default; // Total number of columns in the grid
-$max-width: em(850) !default; // Max-width of the outer container
 
 // Visual Grid Variables
 $visual-grid: true !default; // Display the base grid
@@ -19,6 +17,12 @@ $visual-grid-opacity: 0.3 !default;
 @import "neat/neat";
 @import "neat/neat-helpers";
 
+// Post-Framework Imports/Overrides ------ //
+// Media Query Breakpoints
+$mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid
+$tablet: new-breakpoint(min-width 481px max-width 989px 8); // Use an 8 column grid
+$desktop: new-breakpoint(min-width 1234px 12); // Use a 12 column grid
+
 // Core/Personal Imports & Add-ons ------ //
 @import "core/base";
 @import "core/normalize";
@@ -28,13 +32,6 @@ $visual-grid-opacity: 0.3 !default;
 @import "core/buttons";
 //@import "core/_debug";
 
-// Post-Framework Overrides ------ //
-
-// Media Query Breakpoints
-$mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid
-$tablet: new-breakpoint(min-width 481px max-width 989px 8); // Use an 8 column grid
-$desktop: new-breakpoint(min-width 1234px 12); // Use a 12 column grid
-
 // Typography
 $base-font-size: 24px;
 $base-line-height: 1.5;
@@ -42,8 +39,38 @@ $base-line-height: 1.5;
 // Color
 $mainLinkColor: hsla(0,75%,50%,1);
 
-// And so begins the business...
 
+$tablet-color: hsla(210,60,80,1);
+
+body::after {
+    content: "Tablet";
+    display: block;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    font:1em sans-serif;
+    padding:.30em .5em;
+    background-color: adjust-color($tablet-color, $saturation: -10%,  $lightness:  -50%, $alpha:-.5);
+    color: adjust-color($tablet-color, $saturation: -10%,  $lightness:  100%, $alpha:-.1);
+    text-shadow: 0 -1px 0 adjust-color($tablet-color, $saturation: -10%,  $lightness:  -100%, $alpha:-.5);
+}
+
+.break-bot-livestatus {
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font:1em sans-serif;
+    position:fixed;
+    right:0;
+    top:0;    
+    padding:.30em .5em;
+    text-shadow: 0 1px 0 hsla(0,0,0,.5);
+    z-index:500000;
+}
+
+
+// And so begins the business...
 
 body {
     background-color: #fff;
@@ -68,7 +95,7 @@ body {
        // background-color: hsla(210,50,50,.3);
     }
 
-    @include transition (all .6s linear)
+    @include transition (width .5s ease-out, height .5s ease-out, padding .5s ease-out, font-size .5s ease-out)
 
 }
 
@@ -109,9 +136,6 @@ body {
 .main-content {
     @include span-columns(6);
     @include pad;
-    padding-left:0;
-    padding-bottom:0;
-    padding-right:0;
 
     @include media($mobile) {
         @include fill-parent;
@@ -121,13 +145,17 @@ body {
         @include span-columns(5);
     }
 
+    @include media($desktop) {
+        @include pad(default 0 0 0);
+    }
+
 }
 
 .aside {
     @include span-columns(3);
+    @include vertical-rhythm(.85, .7);
     @include pad;
-    @include vertical-rhythm(.8, .73, false);
-        
+            
     @include media($mobile) {
         @include fill-parent;
     }
@@ -139,6 +167,15 @@ body {
     @include media($desktop) {
         
     }
+
+    p {
+
+    }
+
+    h3 {
+        @include vertical-rhythm(1.2, 1);
+    }
+
 }
 
 h1 {

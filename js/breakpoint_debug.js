@@ -2,7 +2,7 @@
     var f = document,
         a = window,
         b = f.createElement("div"),
-        c = "dimensions",
+        c = "break-bot-livestatus",
         e = function () {
             if (a.innerWidth === undefined) {
                 b.innerText = f.documentElement.clientWidth + "x" + f.documentElement.clientHeight;
