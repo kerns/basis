@@ -3,25 +3,12 @@
 /* Created: [date] */
 /* Updated: [date] */
 
-// Pre-Framework Imports/Overrides ------ //
-// Grid Setup
-$grid-columns: 12 !default; // Total number of columns in the grid
-
-// Visual Grid Variables
-$visual-grid: true !default; // Display the base grid
-$visual-grid-color: #d4d4d4 !default;
-$visual-grid-opacity: 0.3 !default;
 
 // Framwork Imports ------ //
 @import "bourbon/bourbon";
+@import "grid-settings";
 @import "neat/neat";
-@import "neat/neat-helpers";
 
-// Post-Framework Imports/Overrides ------ //
-// Media Query Breakpoints
-$mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid
-$tablet: new-breakpoint(min-width 481px max-width 989px 8); // Use an 8 column grid
-$desktop: new-breakpoint(min-width 1234px 12); // Use a 12 column grid
 
 // Core/Personal Imports & Add-ons ------ //
 @import "core/base";
