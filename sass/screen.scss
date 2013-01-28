@@ -6,7 +6,7 @@
 
 // Framwork Imports ------ //
 @import "bourbon/bourbon";
-@import "grid-settings";
+@import "settings";
 @import "neat/neat";
 
 
@@ -16,15 +16,8 @@
 @import "core/respond-to";
 @import "core/vertical-rhythm";
 @import "core/link-psuedos";
-@import "core/buttons";
+@import "core/buttons_2";
 //@import "core/_debug";
-
-// Typography
-$base-font-size: 24px;
-$base-line-height: 1.5;
-
-// Color
-$mainLinkColor: hsla(0,75%,50%,1);
 
 
 $tablet-color: hsla(210,60,80,1);
@@ -93,7 +86,12 @@ body {
 
 .navigation {
     @include pad; 
+    @include vertical-rhythm(.85, .7);
     @include span-columns(3);
+
+    h3 {
+        @include vertical-rhythm(1, .7);
+    }
 
     ul {
         @include vertical-rhythm(.75, 1, false);
