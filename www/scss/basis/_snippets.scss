@@ -1,0 +1,60 @@
+// Inset box effect (AKA "well")
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+// Usage:
+// .box {
+//     @include box-emboss(0.8, 0.05);
+// }
+
+//-------
+
+// Embossed text effect
+@mixin letterpress($opacity){
+    text-shadow: white($opacity) 0 1px 0;
+}
+
+// Usage:
+// .text {
+//     @include letterpress(0.8);
+// }
+
+//-------
+
+// Unlist this list!
+@mixin unlist() {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        list-style: none;
+    }
+}
+
+// Usage:
+// .nav {
+//     @include unlist();
+// }
+
+//-------
+
+// Hides text
+@mixin hide-text {
+    overflow: hidden;
+    text-indent: -9000px;
+    display: block;
+}
+
+// Usage:
+// h1 {
+//     @include hide-text();
+// }
+
+@mixin hide {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}

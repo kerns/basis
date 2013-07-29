@@ -1,0 +1,19 @@
+// via http://logconsole.com/flex-box-alignment-sass-mixin/
+
+@mixin flex-align($pack, $align){
+    display: -ms-flexbox;
+    -ms-flex-pack: $pack;
+    -ms-flex-align: $pack;
+
+    display: -webkit-box;
+    -webkit-box-pack: $pack;
+    -webkit-box-align: $align;
+
+    display: -moz-box;
+    -moz-box-pack: $pack;
+    -moz-box-align: $align;
+
+    display: box;
+    box-pack: $pack;
+    box-align: $align;
+}

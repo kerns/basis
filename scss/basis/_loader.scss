@@ -1,0 +1,69 @@
+// Loader variables
+$dot-size: 1em;
+$dot-color: hsla(0,0,90,1);
+
+.loader {
+  width: (($dot-size * 4) + ($dot-size/1)) ;
+  padding: ($dot-size/2) ;
+  border-radius: ($dot-size/15);
+  background-color: hsla(0,0,25,.15);
+  box-shadow: inset 0 ($dot-size/30) ($dot-size/3) hsla(0,0,50,.15);
+
+  b {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+}
+
+.dot-wrapper {
+  height: $dot-size;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.dot {
+  width: $dot-size;
+  height: $dot-size;
+  border-radius: $dot-size;
+  background: $dot-color;
+  position: absolute;
+  display: block;
+  @include animation-duration(0.5s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-iteration-count(infinite);
+}
+
+.dot-1, .dot-2 {left: 0;}
+.dot-3 { left: ($dot-size * 1.5); }
+.dot-4 { left: ($dot-size * 3); }
+
+@include keyframes(reveal) {
+  from {
+    @include transform(scale(0.001));
+  }
+  to {
+    @include transform(scale(1));
+  }
+}
+
+@include keyframes(slide) {
+  to {
+    @include transform(translateX(($dot-size * 1.5)));
+  }
+}
+
+.dot-1 {
+ @include animation-name(reveal);
+}
+
+.dot-2, .dot-3 {
+  @include animation-name(slide);
+}
+
+.dot-4 {
+  @include animation-name(reveal);
+  @include animation-direction(reverse);
+}

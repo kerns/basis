@@ -1,0 +1,20 @@
+@mixin all-link-psuedos($color, $underline:false) {
+
+  &:link { color: $color; transition: all .2s ease-out;}
+  &:visited { color: adjust-color($color, $lightness: -10%, $saturation: -25%) ;}
+  &:hover { color: adjust-color($color, $lightness: -5%, $saturation: 5%);
+  &:active { color: darken($color, 40%); transition: none; }
+
+  @if ($underline != false) {
+    $underline-hover-color: adjust-color($color, $lightness: 10%, $saturation: -20%);
+    border-bottom: $underline solid $underline-hover-color;
+  } 
+}
+ 
+  text-decoration: none;
+
+  @if ($underline != false) {
+    $underline-color: adjust-color($color, $lightness: 35%, $saturation: -50%);
+    border-bottom: $underline solid $underline-color;
+  } 
+}

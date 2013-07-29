@@ -1,0 +1,29 @@
+/* Site: ---------- */
+/* Author: ------- */
+/* Created: ------ */
+
+// Framwork (and settings) Import ------ //
+// The order is important here, ...neat wants it this way. //
+@import "bourbon/bourbon";
+@import "settings";
+@import "neat/neat";
+@import "basis/basis";
+
+//@import "basis/bp-debug";
+
+body, html {
+    background-color: whitesmoke;
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    @include flex-align(center, center);
+}
+
+.myloader {
+    font-size: 3em;
+    @include media($nvp) {
+        font-size: 1.5em;        
+    }
+}

@@ -1,0 +1,35 @@
+body:before {
+    display: block;
+    position: absolute;
+    bottom:0;
+    right:0;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+@mixin bp-message($message, $color) {
+    body:before {
+        color: adjust-color($color, $lightness: -30%, $saturation: -40%);
+        background-color: adjust-color($color, $alpha: -0.2);
+        content: $message;
+    }
+}
+
+// Breakpoints
+@include media($nvp) {
+    @include bp-message("Narrow VP: max-width 37.5em", deepskyblue);
+}
+
+@include media($mvp) {
+    @include bp-message("Medium VP: min-width 37.5em / max-width 64em", salmon);
+}
+
+@include media($lvp) {
+    @include bp-message("Large VP: min-width 64em", greenyellow);
+}
+
+// Other nice colors include...
+// crimson, darkseagreen, gold, lightblue, tomato, slategray, plum...
+
+// http://www.w3schools.com/html/html_colornames.asp

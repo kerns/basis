@@ -1,7 +1,0 @@
-html {
-    @include debug-respond-to();
-}
-
-body {
-    @include debug-vertical-rhythm(white);
-}
