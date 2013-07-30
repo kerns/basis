@@ -1,1 +1,0 @@
-<a href="/"><img src="<?=$ad?>" width="100%" /></a>
